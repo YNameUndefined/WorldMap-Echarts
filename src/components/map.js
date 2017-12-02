@@ -34,6 +34,9 @@
     	  lineEchart  
       },
       methods: {
+    	  mapButton(){
+    		this.$router.push("./browser");  
+    	  },
           init() {
               //基于准备好的dom，初始化echarts实例
               this.mapechart = echarts.init(document.getElementById('mapechart'));
@@ -215,7 +218,7 @@
 
 
         		var option = {
-        		    backgroundColor: '#fff',
+        		    backgroundColor: '#000',
         		    baseOption: {
         		        animationDurationUpdate: 1000,
         		        animationEasingUpdate: 'quinticInOut',
@@ -268,12 +271,12 @@
         		                return ele.time
         		            })
         		        },
-        		        backgroundColor: '',
+        		        backgroundColor: '#000',
         		        title: {
         		            text: '2017全国IT行业趋势发展',
         		            subtext: '工程师薪资:元',
-        		            left: 'center',
-        		            top: 'top',
+        		            left: '30%',
+        		            top: 20,
         		            textStyle: {
         		                fontSize: 25,
         		                color: 'rgba(255,255,255, 0.9)'
@@ -298,14 +301,14 @@
         		            id: 'map',
         		            type: 'map',
         		            mapType: 'china',
-        		            top: '10%',
-        		            bottom: '25%',
+        		            top: '7%',
+        		            bottom: '30%',
         		            left: '5%',
         		            right: '25%',
         		            itemStyle: {
         		                normal: {
-        		                    areaColor: '#323c48',
-        		                    borderColor: '#404a59'
+        		                    areaColor: '#030E1A',
+        		                    borderColor: '#fff'
         		                },
         		                emphasis: {
         		                    label: {
@@ -334,7 +337,7 @@
         		        },{
         		            id: 'pie',
         		            type: 'pie',
-        		            radius: ['12%', '40%'],
+        		            radius: ['20%', '50%'],
         		            center: ['80%', '65%'],
         		            //roseType: 'area',
         		            tooltip: {

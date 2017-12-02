@@ -22,6 +22,9 @@
     	  rightBottom
       },
       methods: {
+    	  browserButton(){
+    		  this.$router.push("./map");  
+    	  },
           init() {
               //基于准备好的dom，初始化echarts实例
               this.leftTop = echarts.init(document.getElementById('leftTop'));

@@ -1,5 +1,8 @@
 <template>
-<div id="browser">	
+<div id="browser">
+	<div class="browserButton">
+		<el-button size="mini" icon="el-icon-d-arrow-right" @click="browserButton"></el-button>	
+	</div>
  <el-row style="height: 97%;">
   <el-col :span="15" class="leftlayout">
   	 	<el-row  class="leftandmidel">
@@ -59,5 +62,12 @@
 .leftandmidel{
 	height: 50%;
 }
-
+.browserButton{
+	position: fixed;
+	right: 20px;
+	top: 20px;
+	color: darkgrey;
+	background-color:dimgray;
+	z-index: 999;
+}
 </style>

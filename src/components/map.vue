@@ -1,5 +1,8 @@
 <template>
 <div id="map">
+	<div class="mapButton">
+		<el-button size="mini" icon="el-icon-d-arrow-left" @click="mapButton"></el-button>	
+	</div>
  <el-row :gutter="20">
   <el-col :span="24">
   	<div class="grid-content bg-purple">
@@ -26,9 +29,19 @@
 #map{
 	width: 100%;
 	overflow: hidden;
+	background-color: #fff;
+	background-image: url(../assets/t.jpg);
 }
 .line{
 	position: relative;
 	
+}
+.mapButton{
+	position: fixed;
+	left: 20px;
+	top: 20px;
+	color: darkgrey;
+	background-color:dimgray;
+	z-index: 999;
 }
 </style>
