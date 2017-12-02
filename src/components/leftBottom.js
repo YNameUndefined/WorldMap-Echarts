@@ -102,7 +102,7 @@
         	  var rotate = 45;
         	  var width = 4;
         	 var option = {
-        	      backgroundColor: '#0F375F',
+        	      backgroundColor: 'rgba(5,4,9,0.6)',
         	      title: {
         	          text: '45',
         	          x: 'center',

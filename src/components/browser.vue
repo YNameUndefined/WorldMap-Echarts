@@ -1,13 +1,13 @@
 <template>
 <div id="browser">	
- <el-row style="height: 100%;">
+ <el-row style="height: 97%;">
   <el-col :span="15" class="leftlayout">
   	 	<el-row  class="leftandmidel">
 	      <el-col :span="24" style="height: 100%;">
 	        <left-andmidel style="height: 100%;"></left-andmidel>
 	      </el-col>
 	    </el-row>
-	    <el-row  class="leftcontent">
+	    <el-row  class="leftcontent" style="height: 53%;">
 	      <el-col :span="12" class="leftTop" style="height: 100%;">
 	      	 <section class="chart" style="height: 100%;">
 	        <div id="leftTop" style="height: 100%;min-height:300px;"></div>
@@ -59,7 +59,5 @@
 .leftandmidel{
 	height: 50%;
 }
-.leftcontent{
-	height: 50%;
-}
+
 </style>

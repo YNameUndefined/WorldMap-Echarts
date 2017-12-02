@@ -187,7 +187,7 @@
         	};
 
         var	option = {
-        	    backgroundColor: '#0F365D',
+        	    backgroundColor: 'rgba(5,4,9,0.6)',
         	    legend: {
         	        bottom: 0,
         	        data: ['贵阳', '六盘水', '毕节'],
@@ -207,7 +207,7 @@
         	    tooltip: {
         	        padding: 10,
         	        bottom:20,
-        	        backgroundColor: '#0F365D',
+        	        backgroundColor: 'rgba(5,4,9,0.6)',
         	        borderColor: '#777',
         	        borderWidth: 1,
         	        formatter: function(obj) {

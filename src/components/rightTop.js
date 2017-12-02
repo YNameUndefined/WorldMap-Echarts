@@ -63,7 +63,7 @@
 
         	  // option
         	 var option = {
-        	      backgroundColor: '#0f375f',
+        	      backgroundColor: 'rgba(5,4,9,0.6)',
         	      title: {
           	        text: '贵阳部分城市空气质量',
           	        left: 'center',
@@ -78,7 +78,7 @@
         	              type: 'shadow',
         	              label: {
         	                  show: true,
-        	                  backgroundColor: '#333'
+        	                  backgroundColor: 'rgba(5,4,9,0.6)'
         	              }
         	          }
         	      },

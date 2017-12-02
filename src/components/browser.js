@@ -32,7 +32,7 @@
                   this.init();
               }
               this.leftTop.setOption({
-            	    backgroundColor: "#0F375F",
+            	    backgroundColor: "rgba(5,4,9,0.6)",
             	    color: ['#ffd285', '#ff733f', '#ec4863'],
 
             	    title: [{

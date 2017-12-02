@@ -79,7 +79,7 @@
 
         	var   option = {
         	      baseOption: {
-        	          backgroundColor: '#0F375F',
+        	          backgroundColor: 'rgba(5,4,9,0.6)',
         	          timeline: {
         	              show: true,
         	              axisType: 'category',
