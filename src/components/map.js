@@ -215,7 +215,7 @@
 
 
         		var option = {
-        		    backgroundColor: '#081A3B',
+        		    backgroundColor: '#fff',
         		    baseOption: {
         		        animationDurationUpdate: 1000,
         		        animationEasingUpdate: 'quinticInOut',
@@ -268,7 +268,7 @@
         		                return ele.time
         		            })
         		        },
-        		        backgroundColor: '#081A3B',
+        		        backgroundColor: '',
         		        title: {
         		            text: '2017全国IT行业趋势发展',
         		            subtext: '工程师薪资:元',
