@@ -15,11 +15,7 @@
   require('echarts/lib/visual/seriesColor')
   require('echarts/lib/visual/seriesColor')
   
-  
-  /**
-   * @desc 组件注册
-   */
-  import lineEchart from './line.vue';
+ 
  export default  {
       data() {
           return {
@@ -30,8 +26,10 @@
               },
           }
       },
+      /**
+       * @desc 组件注册
+       */
       components:{
-    	  lineEchart  
       },
       methods: {
     	  mapButton(){
@@ -52,6 +50,9 @@
         	  if (this.mapechart === null) {
                   this.init();
               }
+        	  /**
+        	   * @desc 数据管理 
+        	   */
         	  var data = [{
         		    "time": 1980,
         		    "data": [{
@@ -221,6 +222,9 @@
 
 
         		var option = {
+        			  /**
+        			   * desc 基础配置
+        			   */
         		    backgroundColor: 'rgba(40,126,255,0.5)',
         		    baseOption: {
         		        animationDurationUpdate: 1000,
@@ -275,6 +279,9 @@
         		            })
         		        },
         		        backgroundColor: 'rgba(40,126,255,0.5)',
+        		        /**
+        		         * 三个图表的title管理（包括位置）
+        		         */
         		        title: [{
         		            text: '2017全国IT行业趋势发展',
         		            left: '60%',
@@ -315,6 +322,9 @@
         		        },
         		        xAxis: {},
         		        yAxis: {},
+        		        /**
+        		         * desc 插入数据 盒子设置
+        		         */
         		        series: [{
         		            id: 'map',
         		            type: 'map',
@@ -406,8 +416,6 @@
         		    console.log(restValue);
         		    option.options.push({
         		        visualMap: [{
-        		            //type:'continous',
-        		           //type: 'continuous',
         		            calculable: true,
         		            dimension: 0,
         		            left: 10,
@@ -421,7 +429,6 @@
         		            },
         		            inRange: {
         		                color: [ '#B894FE', '#271F52', '#FF80C0','#1BDBC2']
-        		            //color: ['lightskyblue', 'yellow', 'orangered']
         		            }
         		        }],
         		        xAxis: {

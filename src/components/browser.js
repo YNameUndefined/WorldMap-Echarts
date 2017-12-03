@@ -1,4 +1,13 @@
- import echarts from 'echarts';
+/**
+ * @desc browser 只有航班风险监控这个模块组件
+ * 其他的模块组件基于 import 导入
+ * 使用components 钩子函数 注册
+ * 页面以组件名的标签形式写入
+ * 数据修改 在表格实例化 title  标题
+ * data 实例化的数据修改
+ */
+
+import echarts from 'echarts';
  require('echarts/lib/chart/graph')
  require('echarts/lib/chart/pie')
  import leftAndmidel from './leftAndmidel.vue'
