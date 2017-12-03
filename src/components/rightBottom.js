@@ -42,9 +42,7 @@
         	  if (this.rightBottom === null) {
                   this.init();
               }
-        	//------------------------------------引用请注明出处
-
-        	  var myData = ['大栅栏', '天安门', '故宫', '景山', '北海公园', '后海', '什刹海', '西单', '玉渊潭'];
+        	  var myData = ['机电', '化工', '五金', '电子', '农产', '家用电器', '园林产品', '食品', '医疗'];
         	  var databeast = {
         	      1: [389, 259, 262, 324, 232, 176, 196, 214, 133],
         	      2: [111, 315, 139, 375, 204, 352, 163, 258, 385],
@@ -298,7 +296,7 @@
         	      option.baseOption.timeline.data.push(timeLineData[i]);
         	      option.options.push({
         	          title: {
-        	              text: '2017年贵阳' + timeLineData[i] + '月份外贸数据',
+        	              text: '2017年全国' + timeLineData[i] + '月份外贸数据',
         	          },
         	          series: [{
         	                  name: '进口',

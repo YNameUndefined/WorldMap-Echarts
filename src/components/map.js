@@ -274,7 +274,6 @@
         		        backgroundColor: '#000',
         		        title: {
         		            text: '2017全国IT行业趋势发展',
-        		            subtext: '工程师薪资:元',
         		            left: '30%',
         		            top: 20,
         		            textStyle: {

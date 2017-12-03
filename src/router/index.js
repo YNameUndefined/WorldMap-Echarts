@@ -7,6 +7,11 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+	 {
+	    path: '/',
+	    name: 'browser',
+	    component: browser
+	  },
     {
       path: '/browser',
       name: 'browser',

@@ -65,7 +65,7 @@
         	 var option = {
         	      backgroundColor: 'rgba(5,4,9,0.6)',
         	      title: {
-          	        text: '贵阳部分城市空气质量',
+          	        text: '纽约上证指数（%）',
           	        left: 'center',
           	        textStyle: {
           	            color: '#fff'

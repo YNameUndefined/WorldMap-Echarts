@@ -190,7 +190,7 @@
         	    backgroundColor: 'rgba(5,4,9,0.6)',
         	    legend: {
         	        bottom: 0,
-        	        data: ['贵阳', '六盘水', '毕节'],
+        	        data: ['中国', '俄罗斯', '美国'],
         	        itemGap: 20,
         	        textStyle: {
         	            color: '#fff',
@@ -198,7 +198,7 @@
         	        }
         	    },
         	    title: {
-        	        text: '贵阳部分城市空气质量',
+        	        text: '全球部分国家空气质量',
         	        left: 'center',
         	        textStyle: {
         	            color: '#fff'
@@ -310,17 +310,17 @@
         	        }
         	    },
         	    series: [{
-        	        name: '贵阳',
+        	        name: '中国',
         	        type: 'parallel',
         	        lineStyle: lineStyle,
         	        data: dataBJ
         	    }, {
-        	        name: '六盘水',
+        	        name: '美国',
         	        type: 'parallel',
         	        lineStyle: lineStyle,
         	        data: dataSH
         	    }, {
-        	        name: '毕节',
+        	        name: '俄罗斯',
         	        type: 'parallel',
         	        lineStyle: lineStyle,
         	        data: dataGZ
