@@ -344,8 +344,8 @@
             min: 0,
             max: 1000000,
             text: ['High', 'Low'],
-            realtime: false,
-            calculable: false,
+            realtime: true,
+            calculable: true,
             color: ['orangered', 'yellow', 'lightskyblue']
           },
           tooltip: {
@@ -617,7 +617,7 @@
             zlevel: 2,
             rippleEffect: {
               period: 4,
-              scale: 2.5,
+              scale: 10,
               brushType: 'stroke'
             },
             label: {
@@ -629,7 +629,7 @@
                 fontSize: 15
               }
             },
-            symbolSize: 5,
+            symbolSize: 10,
             itemStyle: {
               normal: {
                 color: '#0D6695',
@@ -644,10 +644,10 @@
             zlevel: 2,
             rippleEffect: {
               period: 4,
-              scale: 2.5,
+              scale: 10,
               brushType: 'stroke'
             },
-            symbolSize: 5,
+            symbolSize: 10,
             itemStyle: {
               normal: {
                 color: '#0D6695',
