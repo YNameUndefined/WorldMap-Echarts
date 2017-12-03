@@ -2,8 +2,8 @@
   <div id="demo" :style="{height:insertHeight}">
     <div class="demoLeft">
       <div id="insertCharts" ref="insertCharts"></div>
-      <div id="rightTwoCharts" ref="rightTwoCharts"></div>
       <div id="peopleInsertCharts" ref="peopleInsertCharts"></div>
+      <div id="rightTwoCharts" ref="rightTwoCharts"></div>
     </div>
 
     <div class="rightContainer">
@@ -20,57 +20,21 @@
       return {
         insertHeight: '',
         radarData: [{name: 'Canada',
-          title: [{
-            text: '经济'
-          }, {
-            text: '科技'
-          }, {
-            text: '军事'
-          }, {
-            text: '文化'
-          }],
-          outData: [80, 4, 0.40, -70],
-          inData: [90, 5, 0.30, -140]
+          outData: [12345, 32323, 42442],
+          inData: [43212, 23423, 29034]
         },
         {
           name: 'china',
-          title: [{
-            text: '经济'
-          }, {
-            text: '科技'
-          }, {
-            text: '军事'
-          }, {
-            text: '文化'
-          }],
-          outData: [100, 8, 0.40, -80],
-          inData: [60, 5, 0.30, -100]
+          outData: [32424, 24424, 42525],
+          inData: [34543, 24234, 13142]
         },
         {name: 'Botswana',
-          title: [{
-            text: '经济'
-          }, {
-            text: '科技'
-          }, {
-            text: '军事'
-          }, {
-            text: '文化'
-          }],
-          outData: [200, 4, 0.40, -60],
-          inData: [40, 3, 0.30, -150]
+          outData: [18203, 23489, 29034],
+          inData: [18203, 23489, 29034]
         },
         {name: 'Brazil',
-          title: [{
-            text: '经济'
-          }, {
-            text: '科技'
-          }, {
-            text: '军事'
-          }, {
-            text: '文化'
-          }],
-          outData: [130, 2, 0.50, -80],
-          inData: [40, 5, 0.20, -100]
+          outData: [43553, 24234, 35345],
+          inData: [54355, 53453, 24244]
         }
         ],
         bar: [
@@ -97,36 +61,20 @@
         ],
         pie: [
           {name: 'china',
-            data: [{value: 335, name: 'IT'},
-              {value: 235, name: '金融'},
-              {value: 324, name: '房产'},
-              {value: 655, name: '农业'},
-              {value: 258, name: '工业'}]
+            data: [405, 11, 67, 234, 212, 113, 0],
+            data2: [111, 11, 333, 234, 212, 22, 0]
           },
           {name: 'Canada',
-            data: [
-              {value: 335, name: 'IT'},
-              {value: 310, name: '金融'},
-              {value: 234, name: '房产'},
-              {value: 135, name: '农业'},
-              {value: 444, name: '工业'}
-            ]
+            data: [321, 11, 67, 322, 212, 555, 0],
+            data2: [132, 11, 67, 333, 212, 555, 111]
           },
           {name: 'Botswana',
-            data: [{value: 999, name: 'IT'},
-              {value: 666, name: '金融'},
-              {value: 234, name: '房产'},
-              {value: 135, name: '农业'},
-              {value: 888, name: '工业'}
-            ]
+            data: [405, 11, 222, 234, 222, 113, 333],
+            data2: [111, 11, 333, 234, 212, 113, 0]
           },
           {name: 'Brazil',
-            data: [{value: 111, name: 'IT'},
-              {value: 555, name: '金融'},
-              {value: 234, name: '房产'},
-              {value: 789, name: '农业'},
-              {value: 323, name: '工业'}
-            ]
+            data: [405, 11, 555, 234, 212, 477, 0],
+            data2: [405, 11, 67, 333, 666, 113, 0]
           }
         ]
       }
@@ -142,17 +90,17 @@
           xAxis: {
             data: param && param.title || ['房产', '电子', '工业', '农业', '轻工业', '视频'],
             axisLabel: {
-            	textStyle: {
-				        color: '#fff'
-				    }
+              textStyle: {
+                color: '#fff'
+              }
             }
           },
           yAxis: {
             splitLine: {show: false},
             axisLabel: {
-            	textStyle: {
-				        color: '#fff'
-				    }
+              textStyle: {
+                color: '#fff'
+              }
             }
           },
           series: [{
@@ -161,7 +109,7 @@
             data: param && param.data || [5, 20, 36, 10, 10, 20],
             itemStyle: {
               normal: {
-                color: param && param.color || 'red'
+                color: param && param.color || '#8CD0EF'
               }
             }
           }]
@@ -172,124 +120,136 @@
         let myChart = echarts.init(document.getElementById('rightTwoCharts'))
         // 绘制图表
         myChart.setOption({
-          radar: [{
-            indicator: param && param.title || [{
-              text: '经济'
-            }, {
-              text: '科技'
-            }, {
-              text: '军事'
-            }, {
-              text: '文化'
-            }],
-            center: ['50%', '50%'],
-            radius: 80,
-            startAngle: 50,
-            splitNumber: 4,
-            shape: 'circle',
-            name: {
-              textStyle: {
-                color: '#ffffff'
-              }
-            },
-            splitArea: {
-              areaStyle: {
-                color: 'rgba(0, 0, 0, 0)'
-              }
-            },
+          tooltip: {
+            trigger: 'axis',
+            axisPointer: {
+              type: ''
+            }
+          },
+          grid: {
+            left: '3%',
+            right: '4%',
+            bottom: '3%',
+            containLabel: true
+          },
+          xAxis: {
+            splitLine: {show: false},
             axisLine: {
               lineStyle: {
-                color: '#B8BCC0',
-                type: 'dotted',
-                opacity: 0.6
-              }
-            },
-            splitLine: {
-              lineStyle: {
-                color: 'rgba(64,183,255,0.6)'
+                color: '#fff'
               }
             }
-          }],
-          series: [{
-            name: '雷达图',
-            type: 'radar',
-            data: [{
-              value: param && param.outData || [100, 8, 0.40, -80],
-              name: '图一',
-              symbol: 'rect',
-              symbolSize: 5,
+          },
+          yAxis: {
+            type: 'category',
+            data: ['巴西', '印尼', '美国'],
+            axisLine: {
               lineStyle: {
-                normal: {
-                  color: '#00FFC6'
-                }
-              },
-              areaStyle: {
-                normal: {
-                  color: 'rgba(0,255,197,0.22)'
-                }
+                color: '#fff'
               }
-            }, {
-              value: param && param.inData || [60, 5, 0.30, -100],
-              name: '图二',
-              lineStyle: {
-                normal: {
-                  color: '#F8E81C'
-                }
-              },
-              areaStyle: {
-                normal: {
-                  color: 'rgba(248,230,27,0.21)'
-                }
-              }
-            }]
-          }]
-        })
-      },
-      rightBottomRightCharts (param) {
-        // 基于准备好的dom，初始化echarts实例
-        console.log(param)
-        let myChart = echarts.init(document.getElementById('peopleInsertCharts'))
-        // 绘制图表
-        myChart.setOption({
-          tooltip: {
-            trigger: 'item',
-            formatter: '{a} <br/>{b}: {c} ({d}%)'
+            }
           },
           series: [
             {
-              name: '访问来源',
-              type: 'pie',
-              radius: '65%',
-              center: ['50%', '60%'],
-              data: param && param.data || [
-                {value: 335, name: 'IT'},
-                {value: 310, name: '金融'},
-                {value: 234, name: '房产'},
-                {value: 135, name: '农业'},
-                {value: 1548, name: '工业'}
-              ],
-              label: {
-                normal: {
-                  show: true,
-                  position: 'outside'
-                }
-              },
+              name: '2011年',
+              type: 'bar',
+              data: param && param.inData || [18203, 23489, 29034],
               itemStyle: {
-                emphasis: {
-                  shadowBlur: 10,
-                  shadowOffsetX: 0,
-                  shadowColor: 'rgba(0, 0, 0, 0.5)'
+                normal: {
+                  color: '#8CD0EF'
+                }
+              }
+            },
+            {
+              name: '2012年',
+              type: 'bar',
+              data: param && param.outData || [19325, 23438, 31000],
+              itemStyle: {
+                normal: {
+                  color: '#98BF8A'
                 }
               }
             }
           ]
         })
       },
+      rightBottomRightCharts (param) {
+        // 基于准备好的dom，初始化echarts实例
+        var datas = [405, 11, 67, 234, 212, 113, 0]
+        let myChart = echarts.init(document.getElementById('peopleInsertCharts'))
+        // 绘制图表
+        myChart.setOption({
+          tooltip: {
+            trigger: 'axis'
+          },
+          xAxis: {
+            bottom: 15,
+            type: 'category',
+            boundaryGap: true,
+            data: ['一月', '二月', '三', '四月', '五月', '六月', '七月'],
+            axisLabel: {
+              textStyle: {
+                color: '#ffffff'
+              }
+            },
+            axisLine: {
+              lineStyle: {
+                color: '#ffffff'
+              }
+            },
+            axisTick: {
+              inside: true,
+              alignWithLabel: true
+            }
+          },
+          yAxis: {
+            type: 'value',
+            splitLine: {show: false},
+            axisLabel: {
+              textStyle: {
+                color: '#ffffff'
+              }
+            },
+            axisLine: {
+              show: false,
+              lineStyle: {
+                color: '#ffffff'
+              }
+            }
+          },
+          series: [{
+            name: 'name1',
+            type: 'line',
+            data: param && param.data || datas,
+            symbolSize: 8,
+            itemStyle: {
+              normal: {
+                color: '#8CD0EF'
+              }
+            }
+          }, {
+            name: 'name2',
+            type: 'line',
+            data: param && param.data2 || [343, 76, 232, 553, 313, 32, 222],
+            symbolSize: 8
+          }],
+          lineStyle: {
+            normal: {
+              shadowColor: 'rgba(225,225,225,0.6)',
+              shadowBlur: 3,
+              shadowOffsetY: 0,
+              shadowOffsetX: 0,
+              opacity: 1
+            }
+          },
+          color: ['#f8d377', '#bc4a6d']
+        })
+      },
       map () {
         var geoCoordMap = {
-          'china': [113.0823, 28.2568],
+          'china': [130.0823, 28.2568],
           'Botswana': [4.895168, 52.370216],
-          'Canada': [-80.895168, 52.2312],
+          'Canada': [-130.895168, 70.2312],
           'Brazil': [-50.895168, -20.2312]
         }
 
@@ -385,7 +345,7 @@
             max: 1000000,
             text: ['High', 'Low'],
             realtime: false,
-            calculable: true,
+            calculable: false,
             color: ['orangered', 'yellow', 'lightskyblue']
           },
           tooltip: {
@@ -413,6 +373,7 @@
           series: [{
             type: 'map',
             mapType: 'world',
+            zoom: 1.2,
             mapLocation: {
               y: 100
             },
@@ -718,15 +679,15 @@
           })
         })
         myChart.on('dblclick', (param) => {
-        	if(param.data.name.toLowerCase() == "china"){
-        		this.$router.push('/map');
-        	}
+          if (param.data.name.toLowerCase() === 'china') {
+            this.$router.push('/map')
+          }
         })
       }
     },
     mounted () {
       this.$refs.demoMap.style.height = window.innerHeight + 'px'
-      this.$refs.insertCharts.style.height = window.innerHeight * 0.3 + 'px'
+      this.$refs.insertCharts.style.height = window.innerHeight * 0.33 + 'px'
       this.$refs.rightTwoCharts.style.height = window.innerHeight * 0.3 + 'px'
       this.$refs.peopleInsertCharts.style.height = window.innerHeight * 0.3 + 'px'
       this.drawLine()
@@ -743,11 +704,11 @@
   }
   body {
     font-size: 15px;
-    background: url('./images/star.jpg') no-repeat;
+    background: url('./images/11.jpg') no-repeat;
     background-size: 100% 100%;
   }
   td {
-   text-align: center
+    text-align: center
   }
   p {
     color:#fff;
@@ -755,7 +716,7 @@
   #demo {
     display: flex;
     width: 100%;
-    background: rgba(0,0,0,0.7);
+    background: rgba(40,126,255,0.5);
   }
   .demoLeft {
     width: 30%;

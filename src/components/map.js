@@ -221,7 +221,7 @@
 
 
         		var option = {
-        		    backgroundColor: '#000',
+        		    backgroundColor: 'rgba(40,126,255,0.5)',
         		    baseOption: {
         		        animationDurationUpdate: 1000,
         		        animationEasingUpdate: 'quinticInOut',
@@ -274,7 +274,7 @@
         		                return ele.time
         		            })
         		        },
-        		        backgroundColor: '#000',
+        		        backgroundColor: 'rgba(40,126,255,0.5)',
         		        title: {
         		            text: '2017全国IT行业趋势发展',
         		            left: '30%',
@@ -304,12 +304,12 @@
         		            type: 'map',
         		            mapType: 'china',
         		            top: '7%',
-        		            bottom: '30%',
-        		            left: '5%',
-        		            right: '25%',
+        		            bottom: '20%',
+        		            left: '10%',
+        		            right: '35%',
         		            itemStyle: {
         		                normal: {
-        		                    areaColor: '#030E1A',
+        		                    areaColor: '#808080',
         		                    borderColor: '#fff'
         		                },
         		                emphasis: {
@@ -397,7 +397,7 @@
         		                color: '#ddd'
         		            },
         		            inRange: {
-        		                color: ['lightskyblue', 'yellow', 'orangered', 'red']
+        		                color: [ '#B894FE', '#271F52', '#FF80C0','#1BDBC2']
         		            //color: ['lightskyblue', 'yellow', 'orangered']
         		            }
         		        }],
