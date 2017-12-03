@@ -77,7 +77,7 @@
 
         	var   option = {
         	      baseOption: {
-        	          backgroundColor: 'rgba(5,4,9,0.6)',
+        	          backgroundColor: '#0C397A',
         	          timeline: {
         	              show: true,
         	              axisType: 'category',
@@ -110,7 +110,7 @@
         	          legend: {
         	              data: ['进口', '出口'],
         	              top: 4,
-        	              right: '40%',
+        	              right: '30%',
         	              textStyle: {
         	                  color: '#fff',
         	              },
@@ -125,17 +125,7 @@
         	          },
         	          
         	          toolbox:{
-        	              right:20,
-        	              feature:{
-        	                  saveAsImage: {},
-        	                  restore: {},
-        	                  dataView: {},
-        	                  dataZoom: {},
-        	                  magicType: {
-        	                      type:['line','bar']
-        	                  },
-        	                  // brush: {},
-        	              }
+        	        	  
         	          },
         	          
         	          grid: [{

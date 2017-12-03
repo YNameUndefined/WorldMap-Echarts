@@ -41,7 +41,7 @@
 }
 .mapButton{
 	position: fixed;
-	left: 20px;
+	left: 0px;
 	top: 20px;
 	color: #FFFFFF;
 	background-color: #000000;
@@ -50,7 +50,7 @@
 .maptobrowser{
 	
 	position: fixed;
-	right: 50px;
+	right: 40px;
 	top: 20px;
 	color: #FFFFFF;
 	background-color: #000000;

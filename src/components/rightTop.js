@@ -63,7 +63,7 @@
 
         	  // option
         	 var option = {
-        	      backgroundColor: 'rgba(5,4,9,0.6)',
+        	      backgroundColor: '#0C397A',
         	      title: {
           	        text: '纽约上证指数（%）',
           	        left: 'center',
@@ -78,7 +78,7 @@
         	              type: 'shadow',
         	              label: {
         	                  show: true,
-        	                  backgroundColor: 'rgba(5,4,9,0.6)'
+        	                  backgroundColor: '#0C397A'
         	              }
         	          }
         	      },

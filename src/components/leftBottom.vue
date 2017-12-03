@@ -1,6 +1,6 @@
 <template>
 <div  style="height: 100%;">
-	<div style="background-color: rgba(5,4,9,0.6); text-align: center;padding-bottom: 10px;">
+	<div style="background-color: #0C397A; text-align: center;padding-bottom: 10px;">
 		<el-button type="info" round style="background-color: #0F365D;border: none;">发动机工作情况</el-button>
 	</div>
     <div id="leftBottom" >

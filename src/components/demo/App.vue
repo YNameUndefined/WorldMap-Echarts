@@ -362,9 +362,9 @@
         // 绘制图表
         myChart.setOption({
           title: {
-            text: '贵阳大数据',
+            text: '全球经济趋势流转动向',
             left: '50%',
-            top: '10px',
+            top: '30px',
             textStyle: {
               color: '#fff',
               opacity: 0.7
@@ -494,7 +494,7 @@
               {name: 'Haiti', value: 9896.4},
               {name: 'Hungary', value: 10014.633},
               {name: 'Indonesia', value: 240676.485},
-              {name: 'India', value: 1205624.648},
+              {name: 'India', value: 12054.648},
               {name: 'Ireland', value: 4467.561},
               {name: 'Iran', value: 240676.485},
               {name: 'Iraq', value: 30962.38},
@@ -718,7 +718,9 @@
           })
         })
         myChart.on('dblclick', (param) => {
-          this.$router.push('/map')
+        	if(param.data.name.toLowerCase() == "china"){
+        		this.$router.push('/map');
+        	}
         })
       }
     },
@@ -741,8 +743,8 @@
   }
   body {
     font-size: 15px;
-    /*background: url('./images/star.jpg') no-repeat;
-    background-size: 100% 100%;*/
+    background: url('./images/star.jpg') no-repeat;
+    background-size: 100% 100%;
   }
   td {
    text-align: center

@@ -1,7 +1,7 @@
 <template>
 <div id="browser">
 	<div class="browserButton">
-		<el-button size="mini" icon="el-icon-d-arrow-right" @click="browserButton"></el-button>	
+		<el-button ize="mini" icon="el-icon-d-arrow-right" class="bbutton" @click="browserButton"></el-button>	
 	</div>
  <el-row style="height: 97%;">
   <el-col :span="15" class="leftlayout">
@@ -47,7 +47,7 @@
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 #browser{
-	background-color: #051C3B;
+	background-color: #0C397A;
 	overflow: hidden;
 }
 .leftlayout,.rightlayout{
@@ -64,10 +64,16 @@
 }
 .browserButton{
 	position: fixed;
-	right: 20px;
-	top: 20px;
+	right: 0px;
+	top: 0px;
 	color: darkgrey;
-	background-color:dimgray;
 	z-index: 999;
+	border: none;
+}
+.bbutton{
+	background-color: #0C397A;
+	border: none;
+	color: #FFFFFF;
+	font-size:30px ;
 }
 </style>
