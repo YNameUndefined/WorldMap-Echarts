@@ -1,8 +1,11 @@
 <template>
   <div id="demo" :style="{height:insertHeight}">
     <div class="demoLeft">
+      <!--柱形图-->
       <div id="insertCharts" ref="insertCharts"></div>
+      <!--折线图-->
       <div id="peopleInsertCharts" ref="peopleInsertCharts"></div>
+      <!--横行柱形图-->
       <div id="rightTwoCharts" ref="rightTwoCharts"></div>
     </div>
 
@@ -19,6 +22,7 @@
     data () {
       return {
         insertHeight: '',
+        //  横向柱形图数据
         radarData: [{name: 'Canada',
           outData: [12345, 32323, 42442],
           inData: [43212, 23423, 29034]
@@ -37,6 +41,7 @@
           inData: [54355, 53453, 24244]
         }
         ],
+        //  纵向柱形图数据
         bar: [
           {name: 'china',
             title: ['房产', '电子', '工业', '农业', '轻工业', '食品'],
@@ -59,6 +64,7 @@
             color: '#98BF8A'
           }
         ],
+        //  折线图数据
         pie: [
           {name: 'china',
             data: [405, 11, 67, 234, 212, 113, 0],
@@ -80,7 +86,7 @@
       }
     },
     methods: {
-//      财政收入
+      //  纵向柱形图charts生成方法
       drawLine (param) {
         // 基于准备好的dom，初始化echarts实例
         let myChart = echarts.init(document.getElementById('insertCharts'))
@@ -88,7 +94,7 @@
         myChart.setOption({
           tooltip: {},
           xAxis: {
-            data: param && param.title || ['房产', '电子', '工业', '农业', '轻工业', '视频'],
+            data: param && param.title || ['房产', '电子', '工业', '农业', '轻工业', '视频'],  //  X轴数据填充
             axisLabel: {
               textStyle: {
                 color: '#fff'
@@ -106,15 +112,16 @@
           series: [{
             name: '销量',
             type: 'bar',
-            data: param && param.data || [5, 20, 36, 10, 10, 20],
+            data: param && param.data || [5, 20, 36, 10, 10, 20], //  显示数据填充
             itemStyle: {
               normal: {
-                color: param && param.color || '#8CD0EF'
+                color: param && param.color || '#8CD0EF'  //  颜色数据填充
               }
             }
           }]
         })
       },
+      //  横向柱形图charts生成方法
       rightTwoCharts (param) {
         // 基于准备好的dom，初始化echarts实例
         let myChart = echarts.init(document.getElementById('rightTwoCharts'))
@@ -153,7 +160,7 @@
             {
               name: '2011年',
               type: 'bar',
-              data: param && param.inData || [18203, 23489, 29034],
+              data: param && param.inData || [18203, 23489, 29034], //  数据填充
               itemStyle: {
                 normal: {
                   color: '#8CD0EF'
@@ -163,7 +170,7 @@
             {
               name: '2012年',
               type: 'bar',
-              data: param && param.outData || [19325, 23438, 31000],
+              data: param && param.outData || [19325, 23438, 31000],  //  数据填充
               itemStyle: {
                 normal: {
                   color: '#98BF8A'
@@ -173,6 +180,7 @@
           ]
         })
       },
+      //  折线图charts生成方法
       rightBottomRightCharts (param) {
         // 基于准备好的dom，初始化echarts实例
         var datas = [405, 11, 67, 234, 212, 113, 0]
@@ -220,7 +228,7 @@
           series: [{
             name: 'name1',
             type: 'line',
-            data: param && param.data || datas,
+            data: param && param.data || datas, //  数据填充
             symbolSize: 8,
             itemStyle: {
               normal: {
@@ -230,7 +238,7 @@
           }, {
             name: 'name2',
             type: 'line',
-            data: param && param.data2 || [343, 76, 232, 553, 313, 32, 222],
+            data: param && param.data2 || [343, 76, 232, 553, 313, 32, 222],  //  数据填充
             symbolSize: 8
           }],
           lineStyle: {
@@ -245,14 +253,21 @@
           color: ['#f8d377', '#bc4a6d']
         })
       },
+      //  全球地图生成方法
       map () {
+        /**
+         * 显示点的坐标
+         */
         var geoCoordMap = {
           'china': [130.0823, 28.2568],
           'Botswana': [4.895168, 52.370216],
           'Canada': [-130.895168, 70.2312],
           'Brazil': [-50.895168, -20.2312]
         }
-
+        /**
+         * 所在点对应数据
+         * 上面数据添加修改后务必这里添加修改，value可不用
+         */
         var data = [{
           id: 1,
           name: 'china',
@@ -268,7 +283,7 @@
           id: 4,
           name: 'Brazil'
         }]
-
+        //  生成出线方法
         function formtGCData (geoData, data, srcNam, dest) {
           var tGeoDt = []
           if (dest) {
@@ -290,7 +305,7 @@
           }
           return tGeoDt
         }
-
+        //  生成进线方法
         function formtVData (geoData, data, srcNam) {
           var tGeoDt = []
           for (var i = 0; i < data.length; i++) {
@@ -340,13 +355,14 @@
             }
           },
           dataRange: {
-            show: false,
+            show: false,  //  调色板显示与否
             min: 0,
             max: 1000000,
             text: ['High', 'Low'],
             realtime: true,
             calculable: true,
-            color: ['orangered', 'yellow', 'lightskyblue']
+            color: ['orangered', 'yellow', 'lightskyblue']            //  生成地图颜色以及发散点颜色
+
           },
           tooltip: {
             trigger: 'item'
@@ -380,6 +396,7 @@
             itemStyle: {
               emphasis: {label: {show: true}}
             },
+            // 对应生成地图颜色板块数据
             data: [
               {name: 'Afghanistan', value: 28397.812},
               {name: 'Angola', value: 19549.124},
@@ -658,26 +675,27 @@
           }
           ]
         })
-        //  雷达图
+        //  横向柱形图数据change
         myChart.on('click', (param) => {
           this.radarData.forEach((item, index) => {
             if (param.data.name.toLowerCase() === item.name.toLowerCase()) {
               this.rightTwoCharts(item)
             }
           })
-          //  柱形图
+          //  纵向柱形图数据change
           this.bar.forEach((item, index) => {
             if (param.data.name.toLowerCase() === item.name.toLowerCase()) {
               this.drawLine(item)
             }
           })
-          //  pie
+          //  折线图数据change
           this.pie.forEach((item, index) => {
             if (param.data.name.toLowerCase() === item.name.toLowerCase()) {
               this.rightBottomRightCharts(item)
             }
           })
         })
+        // china双击事件
         myChart.on('dblclick', (param) => {
           if (param.data.name.toLowerCase() === 'china') {
             this.$router.push('/map')
