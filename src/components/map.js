@@ -275,15 +275,31 @@
         		            })
         		        },
         		        backgroundColor: 'rgba(40,126,255,0.5)',
-        		        title: {
+        		        title: [{
         		            text: '2017全国IT行业趋势发展',
-        		            left: '30%',
-        		            top: 20,
+        		            left: '60%',
+        		            top: "10%",
         		            textStyle: {
         		                fontSize: 25,
         		                color: 'rgba(255,255,255, 0.9)'
         		            }
-        		        },
+        		        },{
+        		            text: '2017全国IT行业薪酬分布',
+        		            left: '6%',
+        		            top: "63%",
+        		            textStyle: {
+        		            	 fontSize: 19,
+        		                color: 'rgba(255,255,255, 0.9)'
+        		            }
+        		        },{
+        		            text: '2017全国IT就业比例',
+        		            left: '10%',
+        		            top: "7%",
+        		            textStyle: {
+        		                fontSize: 19,
+        		                color: 'rgba(255,255,255, 0.9)'
+        		            }
+        		        }],
         		        tooltip: {
         		            formatter: function(params) {
         		                if ('value' in params.data) {
@@ -303,10 +319,10 @@
         		            id: 'map',
         		            type: 'map',
         		            mapType: 'china',
-        		            top: '7%',
-        		            bottom: '20%',
-        		            left: '10%',
-        		            right: '35%',
+        		            top: '4%',
+        		            bottom: '8%',
+        		            left: '40%',
+        		            right: '0%',
         		            itemStyle: {
         		                normal: {
         		                    areaColor: '#808080',
@@ -324,7 +340,14 @@
         		            id: 'bar',
         		            type: 'bar',
         		            tooltip: {
+        		            	"trigger": "axis",
         		                show: false
+        		            },
+        		            grid: {
+        		                left: "31%",
+        		                right: "0%",
+        		                bottom: "3%",
+        		                containLabel: true
         		            },
         		            label: {
         		                normal: {
@@ -339,8 +362,8 @@
         		        },{
         		            id: 'pie',
         		            type: 'pie',
-        		            radius: ['20%', '50%'],
-        		            center: ['80%', '65%'],
+        		            radius: ['10%', '30%'],
+        		            center: ['15%', '30%'],
         		            //roseType: 'area',
         		            tooltip: {
         		                formatter: '{b} {d}%'
