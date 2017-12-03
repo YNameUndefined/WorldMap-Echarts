@@ -35,7 +35,10 @@
       },
       methods: {
     	  mapButton(){
-    		this.$router.push("./browser");  
+    		this.$router.push("./goalMap");  
+    	  },
+    	  maptobrowser(){
+    		  this.$router.push("./browser");
     	  },
           init() {
               //基于准备好的dom，初始化echarts实例

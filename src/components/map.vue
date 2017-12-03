@@ -1,7 +1,10 @@
 <template>
 <div id="map">
 	<div class="mapButton">
-		<el-button size="mini" icon="el-icon-d-arrow-left" @click="mapButton"></el-button>	
+		<el-button size="mini" class="mapButton_s" icon="el-icon-d-arrow-left" @click="mapButton"></el-button>	
+	</div>
+	<div class="maptobrowser">
+		<el-button size="mini" class="mapButton_b" icon="el-icon-d-arrow-right" @click="maptobrowser"></el-button>	
 	</div>
  <el-row :gutter="20">
   <el-col :span="24">
@@ -40,8 +43,30 @@
 	position: fixed;
 	left: 20px;
 	top: 20px;
-	color: darkgrey;
-	background-color:dimgray;
+	color: #FFFFFF;
+	background-color: #000000;
 	z-index: 999;
+}
+.maptobrowser{
+	
+	position: fixed;
+	right: 50px;
+	top: 20px;
+	color: #FFFFFF;
+	background-color: #000000;
+	z-index: 999;
+
+}
+.mapButton_s{
+	background-color: #000000;
+	border:none ;
+	color: #FFFFFF;
+	font-size: 30px;
+}
+.mapButton_b{
+	background-color: #000000;
+	border:none ;
+	color: #FFFFFF;
+	font-size: 30px;
 }
 </style>
